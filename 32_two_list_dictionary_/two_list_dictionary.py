@@ -27,11 +27,24 @@ def two_list_dictionary(keys, values):
     # values[idx] is the information at the same index of values
     # to = them... that puts them into a key:value format? 
     
+# example
+# ["a", "b"]
+# [1]
+
+#as long as the index you're looking at is less than the length of the second list, 
+#you know that there will be information there 
+
+#{"a": 1, "b": None}
 
     out = {}
 
     for idx, val in enumerate(keys):
         out[val] = values[idx] if idx < len(values) else None
+
+        # if idx < len(values):
+        #     out[val] = values[idx]
+        # else:
+        #     out[val] = None  
 
     return out
 

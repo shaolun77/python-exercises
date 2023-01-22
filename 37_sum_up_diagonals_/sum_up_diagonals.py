@@ -28,8 +28,11 @@ def sum_up_diagonals(matrix):
     total = 0
     for x in range(len(matrix)):
         total += matrix[x][x]
-        total += matrix[x][-1 - 1]
-
+        total += matrix[x][-1 - x]
+    # total += matrix[0][0]
+    # total += matrix[0][-1]
+    # 1 + 3 + 5 + 5 + 9 + 7 = total
+    
     return total
 
     # not exactly sure about the second line, [-1 - 1], how that selects the right index...
